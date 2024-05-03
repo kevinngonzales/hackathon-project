@@ -20,7 +20,6 @@
 <br></br>
 
 This project focuses on access to Up-to-Date Tech Education and to create a reliable and high fidelity AI-curated content updating educational materials in real-time. 
-<p align="right">
 
 <br></br>
 
@@ -43,17 +42,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Installation
 
-1. Clone repository "git clone https://github.com/kevinngonzales/hackathon-project.git"
-
-2. Open with VS Code
-
-3. Navigate to root folder of project in terminal "cd .\hackathon-project"
-
-4. In terminal run "npm install" to install dependencies
-
-5. In terminal run "npm run dev" to host local server
-
-6. (Ctrl + Click) the url to open in browser
+Project installation steps go here
 
 <br></br>
 
