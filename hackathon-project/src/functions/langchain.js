@@ -9,10 +9,8 @@ const llm = new OpenAI({
 
 export async function getAnswer(question) {
     let answer = ''
-
     try {
-        console.log('testinglangchain')
-        const answer = await llm.invoke(question);
+        answer = await llm.invoke(question);
         console.log(answer);
         return answer
     } catch (e) {
