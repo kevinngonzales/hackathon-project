@@ -3,3 +3,15 @@ html {
   background: #464486;
 }
 
+@font-face {
+    font-family: 'Plus Jakarta';
+    src: url('/public/static/PlusJakartaSans-Regular.ttf') format('truetype');
+  }
+  
+  body {
+    font-family: 'Plus Jakarta', sans-serif;
+  }
+  
+  h1 {
+    font-family: 'Plus Jakarta', sans-serif;
+  }
