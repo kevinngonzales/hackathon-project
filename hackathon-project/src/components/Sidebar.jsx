@@ -1,17 +1,21 @@
-import React from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
+import LogoutButton from "./LogoutButton";
 
 
 // sidebar component which holds links to different pages as-well as login/signup buttons which direct to respective pages
 
-
 function Sidebar() {
+
   return (
     <div className="fixed bg-slate-800/[0.6] h-full w-56 transition-all hover:bg-slate-800 flex flex-col justify-between">
+
+<Link to="/" className="text-white">
       <div className="bg-slate-800 radius flex p-8">
         <img src="/logo.png" alt="Logo" />
         <span className="text-2xl content-center ml-2">TechUp</span>
       </div>
+</Link>
 
       <ul className="flex-col h-full content-start p-3 ml-3 space-y-10">
         <li>
@@ -19,11 +23,7 @@ function Sidebar() {
             Discover
           </Link>
         </li>
-        <li>
-          <Link to="/1" className="text-white">
-            Category 1
-          </Link>
-        </li>
+
       </ul>
 
       <div className="flex-col pt-56">
@@ -37,6 +37,8 @@ function Sidebar() {
             Login
           </button>
         </Link>
+
+<LogoutButton />
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { getAnswer } from "../functions/langchain";
+import UserProfile from "../components/UserProfile";
 
 function Math() {
   const [question, setQuestion] = useState("");
@@ -15,11 +16,10 @@ function Math() {
 
   return (
     <>
-
-
       <div class="ml-64 flex flex-col h-screen mr-10">
+        <div class=" flex justify-center p-12">Category 1</div>
 
-         <div class=" flex justify-center p-12">Category 1</div>
+        <UserProfile />
 
         <div class="border-white border-2 flex-grow rounded-2xl content-center m-6 bg-white/[0.1] ">
           <span class="">Results displayed here: {results}</span>

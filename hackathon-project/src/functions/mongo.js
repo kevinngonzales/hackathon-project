@@ -9,7 +9,7 @@ mongoose.connect('mongodb+srv://kevinngstem:77TUpi6k5ohHoK6q@hackathon-project.a
         console.log('MongoDB connected');
     })
     .catch((error) => {
-        console.error('MongoDB connection error:', error);
+        console.error(error);
     });
 
 
@@ -31,7 +31,6 @@ const userSchema = new mongoose.Schema({
 });
 
 // create a model based on the schema we defined previously 
-
 const collection = mongoose.model('User', userSchema);
 
 export { collection } 
