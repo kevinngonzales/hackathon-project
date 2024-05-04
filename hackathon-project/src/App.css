@@ -4,14 +4,34 @@ html {
 }
 
 @font-face {
-    font-family: 'Plus Jakarta';
-    src: url('/public/static/PlusJakartaSans-Regular.ttf') format('truetype');
-  }
-  
-  body {
-    font-family: 'Plus Jakarta', sans-serif;
-  }
-  
-  h1 {
-    font-family: 'Plus Jakarta', sans-serif;
-  }
+  font-family: "Plus Jakarta";
+  src: url("/public/static/PlusJakartaSans-Regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "Plus Jakarta", sans-serif;
+  font-size: large;
+}
+
+h1 {
+  font-family: "Plus Jakarta", sans-serif;
+}
+
+::-webkit-input-placeholder {
+  color: red;
+  text-align: center;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: red;
+  text-align: center;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: red;
+  text-align: center;
+}
+:-ms-input-placeholder {
+  color: red;
+  text-align: center;
+}

@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
   const logout = () => {
     setIsLoggedIn(false);
 
-    console.log(user + " Signed Out");
+    console.log("Signed Out");
     setUsername("");
   };
 

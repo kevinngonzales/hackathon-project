@@ -10,7 +10,7 @@ import { useAuth } from "../components/AuthContext";
 function Login() {
   const navigate = useNavigate();
 
-  const { isLoggedin, login } = useAuth();
+  const { isLoggedIn, login } = useAuth();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -40,7 +40,7 @@ function Login() {
               <h1 class="text-xl font-bold leading-tight tracking-tight md:text-2xl dark:text-white">
                 Sign in to your account
               </h1>
-              {isLoggedin ? (
+              {isLoggedIn ? (
                 <p>You are already logged in!</p>
               ) : (
                 <form class="space-y-4 md:space-y-6" action="POST">
