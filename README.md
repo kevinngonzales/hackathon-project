@@ -46,6 +46,23 @@ Project installation steps go here
 
 <br></br>
 
+
+### Local Development Hosting/Testing
+
+Clone repository "https://github.com/kevinngonzales/hackathon-project.git"
+
+Open with VS Code
+
+Navigate to root folder of project in terminal "cd .\hackathon-project"
+
+In terminal run "npm install" to install dependencies
+
+In terminal run "npm start" to start beckend server 
+
+In terminal run "npm run dev" to start frontend localhost developmental server 
+
+(Ctrl + Click) the url in the terminal to open the webpage.
+
 <!-- LICENSE -->
 ## License
 
