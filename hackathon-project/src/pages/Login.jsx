@@ -94,7 +94,7 @@ function Login() {
 
                   <div class="flex justify-center space-x-1 text-md">
                       <div>Dont't have an account?</div>
-                      <Link class="text-tertiary" to="/login">
+                      <Link class="text-tertiary" to="/signup">
                         Sign up
                       </Link>
                     </div>
