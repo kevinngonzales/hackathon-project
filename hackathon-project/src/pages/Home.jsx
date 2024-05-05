@@ -144,10 +144,10 @@ function Math() {
         <form className=" mr-8 flex-col" onSubmit={handleSubmit}>
           <div className="flex mb-6">
             <input
+              className="pl-5 border-white border-2 bg-slate-200/[0.1] text-white w-10/12 h-24 rounded-2xl ml-12 transition-all hover:bg-slate-800/[0.2] "
               type="text"
               id="question"
               placeholder="Type here...."
-              className="border-white border-2 bg-slate-200/[0.1] text-white w-10/12 h-24 rounded-2xl ml-6 transition-all hover:bg-slate-800/[0.2] "
               style={{ lineHeight: "24px" }}
               value={question}
               onChange={(e) => {
