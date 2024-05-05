@@ -13,7 +13,7 @@ function Sidebar() {
   return (
     <div className="fixed bg-slate-800/[0.6] h-full w-80 transition-all hover:bg-slate-800 flex flex-col justify-between">
       <input
-        class="border-white border-2 bg-slate-200/[0.1] text-white rounded-xl h-16 transition-all m-4"
+        className="border-white border-2 bg-slate-200/[0.1] text-white rounded-xl h-16 transition-all m-4"
         type="text"
         placeholder="Search"
       />
@@ -21,7 +21,7 @@ function Sidebar() {
       <ul className="flex-col h-full content-start p-3 ml-3 space-y-6">
         <li className="rounded-xl transition-all hover:bg-pink h-12 pl-2 flex items-center">
           <Link to="/" className="text-white flex items-center">
-            <img src="/logo.svg" class="h-9 mr-2" />
+            <img src="/logo.svg" className="h-9 mr-2" />
             AI Generator
           </Link>
         </li>

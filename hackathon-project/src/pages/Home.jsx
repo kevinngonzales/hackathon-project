@@ -34,15 +34,15 @@ function Math() {
 
   return (
     <>
-      <div class="ml-64 flex flex-col h-screen mr-10 pl-24 pr-24">
+      <div className="ml-64 flex flex-col h-screen mr-10 pl-24 pr-24">
         <Link to="/" className="text-white">
-          <div class=" flex items-center justify-between mt-8 mr-10">
-            <img class="h-20" src="/text.svg" />
-            <div class="flex content-center align-middle">
-              <button onClick={clearChat} class="order-1">
-                <img class="h-14" src="/refresh.png" />
+          <div className=" flex items-center justify-between mt-8 mr-10">
+            <img className="h-20" src="/text.svg" />
+            <div className="flex content-center align-middle">
+              <button onClick={clearChat} className="order-1">
+                <img className="h-14" src="/refresh.png" />
               </button>
-              <button class="mr-3">
+              <button className="mr-3">
                 <img src="note.svg" />
               </button>
             </div>
@@ -50,11 +50,11 @@ function Math() {
         </Link>
 
         {isLoggedIn && !loadChat && (
-          <img class="flex h-64 mt-56" src="/homelogo.svg" />
+          <img className="flex h-64 mt-56" src="/homelogo.svg" />
         )}
 
         {!isLoggedIn && !loadChat && (
-          <img class="flex h-64 mt-56" src="/homelogo2.svg" />
+          <img className="flex h-64 mt-56" src="/homelogo2.svg" />
         )}
 
         {/* shows users prompt and ai's answer like a chat display */}
@@ -63,17 +63,17 @@ function Math() {
           {loadChat && (
             <div className="flex-col pl-32 pr-32 items-start ">
               <div className="flex-col mb-20">
-                <div class="flex items-center mb-2">
-                  <img class="mr-2" src="profile.svg" />
-                  <div class="mr-10">You:</div>
+                <div className="flex items-center mb-2">
+                  <img className="mr-2" src="profile.svg" />
+                  <div className="mr-10">You:</div>
                 </div>
                 {question}
               </div>
 
               <div className="flex-col mr-24 ">
-                <div class="flex items-center mb-6">
-                  <img class="mr-2" src="robot.svg" />
-                  <div class="mr-12">TechUp:</div>
+                <div className="flex items-center mb-6">
+                  <img className="mr-2" src="robot.svg" />
+                  <div className="mr-12">TechUp:</div>
                 </div>
                 {results}
               </div>
@@ -96,7 +96,7 @@ function Math() {
               }}
               className="border-white border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all ml-6 h-20 hover:bg-slate-800/[0.2]"
             >
-              <div class="font-bold">Lesson Clarification</div>
+              <div className="font-bold">Lesson Clarification</div>
               Understanding design patterns
             </button>
 
@@ -109,7 +109,7 @@ function Math() {
               }}
               className="border-white hover:bg-slate-800/[0.2] border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all mr-8 h-20 "
             >
-              <div class="font-bold">Career Readiness</div>
+              <div className="font-bold">Career Readiness</div>
               Preparing for technical interviews
             </button>
 
@@ -122,7 +122,7 @@ function Math() {
               }}
               className="border-white border-2  hover:bg-slate-800/[0.2] bg-slate-200/[0.1] text-white rounded-2xl transition-all ml-6 h-20"
             >
-              <div class="font-bold">Project Assistance</div>
+              <div className="font-bold">Project Assistance</div>
               Debugging coding errors
             </button>
 
@@ -135,19 +135,19 @@ function Math() {
               }}
               className="border-white border-2 bg-slate-200/[0.1] text-white hover:bg-slate-800/[0.2] rounded-2xl transition-all mr-8 h-20 "
             >
-              <div class="font-bold">Help Me Study</div>
+              <div className="font-bold">Help Me Study</div>
               Learning programming languages
             </button>
           </div>
         )}
 
-        <form class=" mr-8 flex-col" onSubmit={handleSubmit}>
-          <div class="flex mb-6">
+        <form className=" mr-8 flex-col" onSubmit={handleSubmit}>
+          <div className="flex mb-6">
             <input
               type="text"
               id="question"
               placeholder="Type here...."
-              class="border-white border-2 bg-slate-200/[0.1] text-white w-10/12 h-24 rounded-2xl ml-6 transition-all hover:bg-slate-800/[0.2] "
+              className="border-white border-2 bg-slate-200/[0.1] text-white w-10/12 h-24 rounded-2xl ml-6 transition-all hover:bg-slate-800/[0.2] "
               style={{ lineHeight: "24px" }}
               value={question}
               onChange={(e) => {
@@ -156,7 +156,7 @@ function Math() {
             />
 
             <button
-              class="border-white rounded-2xl border-2 h-24 w-2/12 ml-6 transition-all hover:bg-slate-800/[0.6]"
+              className="border-white rounded-2xl border-2 h-24 w-2/12 ml-6 transition-all hover:bg-slate-800/[0.6]"
               type="submit"
             >
               Enter

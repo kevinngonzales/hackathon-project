@@ -5,19 +5,19 @@ import DiscoverTab from "../components/DiscoverTab";
 import VideoCard from "../components/VideoCard";
 
 import Divider from "../components/Divider";
-import { uiuxData } from "../dummyData/uiuxData";
-import { uiuxArticleData } from "../dummyData/uiuxArticleData";
-import { uiuxToolsData } from "../dummyData/uiuxToolsData";
+import { cyberData } from "../dummyData/cyberData";
+import { cyberArticleData } from "../dummyData/cyberArticleData";
+import { cyberTools } from "../dummyData/cyberTools";
 
-function Discovery() {
+function DiscoverCyber() {
   const tabs = [
-    { name: "UX UI Design", href: "/discover", current: true },
+    { name: "UX UI Design", href: "/discover", current: false },
     { name: "Web Development", href: "/discoverWeb", current: false },
-    { name: "Cyber Security", href: "#", current: false },
-    { name: "Data Analysis", href: "#", current: false },
+    { name: "Cyber Security", href: "/discoverCyber", current: true },
+    { name: "Data Analysis", href: "/discoverData", current: false },
   ];
 
-  const [text, setText] = useState("UI UX Design");
+  const [text, setText] = useState("Cyber Security");
 
   const handleClick = (e) => {
     setText(e.target.innerText);
@@ -39,23 +39,23 @@ function Discovery() {
 
       <div className="mt-5">
         <VideoCard
-          data={uiuxData}
+          data={cyberData}
           text={`Recommended videos for you in ${text} `}
         />
       </div>
       <div className="mt-20 mb-10">
         <Divider />
       </div>
-      <VideoCard data={uiuxToolsData} text={`Trending Tools for  ${text}`} />
+      <VideoCard data={cyberTools} text={`Trending Tools for  ${text}`} />
       <div className="mt-20 mb-10">
         <Divider />
       </div>
       <VideoCard
-        data={uiuxArticleData}
+        data={cyberArticleData}
         text={`Articles & books for  ${text}`}
       />
     </div>
   );
 }
 
-export default Discovery;
+export default DiscoverCyber;

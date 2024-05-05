@@ -5,19 +5,19 @@ import DiscoverTab from "../components/DiscoverTab";
 import VideoCard from "../components/VideoCard";
 
 import Divider from "../components/Divider";
-import { uiuxData } from "../dummyData/uiuxData";
-import { uiuxArticleData } from "../dummyData/uiuxArticleData";
-import { uiuxToolsData } from "../dummyData/uiuxToolsData";
+import { webData } from "../dummyData/webData";
+import { webArticleData } from "../dummyData/webArticleData";
+import { webTools } from "../dummyData/webTools";
 
-function Discovery() {
+function DiscoverWeb() {
   const tabs = [
-    { name: "UX UI Design", href: "/discover", current: true },
-    { name: "Web Development", href: "/discoverWeb", current: false },
-    { name: "Cyber Security", href: "#", current: false },
-    { name: "Data Analysis", href: "#", current: false },
+    { name: "UX UI Design", href: "/discover", current: false },
+    { name: "Web Development", href: "/discoverWeb", current: true },
+    { name: "Cyber Security", href: "/discoverCyber", current: false },
+    { name: "Data Analysis", href: "/discoverData", current: false },
   ];
 
-  const [text, setText] = useState("UI UX Design");
+  const [text, setText] = useState("Web Development");
 
   const handleClick = (e) => {
     setText(e.target.innerText);
@@ -39,23 +39,20 @@ function Discovery() {
 
       <div className="mt-5">
         <VideoCard
-          data={uiuxData}
+          data={webData}
           text={`Recommended videos for you in ${text} `}
         />
       </div>
       <div className="mt-20 mb-10">
         <Divider />
       </div>
-      <VideoCard data={uiuxToolsData} text={`Trending Tools for  ${text}`} />
+      <VideoCard data={webTools} text={`Trending Tools for  ${text}`} />
       <div className="mt-20 mb-10">
         <Divider />
       </div>
-      <VideoCard
-        data={uiuxArticleData}
-        text={`Articles & books for  ${text}`}
-      />
+      <VideoCard data={webArticleData} text={`Articles & books for  ${text}`} />
     </div>
   );
 }
 
-export default Discovery;
+export default DiscoverWeb;

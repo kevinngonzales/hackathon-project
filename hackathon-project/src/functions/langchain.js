@@ -12,9 +12,9 @@ const llm = new OpenAI({
 });
 
 export async function getAnswer(question) {
-    let answer = ''
+    let answer = 'Should return an Answer'
     try {
-        answer = await llm.invoke(question);
+        // answer = await llm.invoke(question);
         console.log(answer);
         return answer
     } catch (e) {

@@ -5,19 +5,19 @@ import DiscoverTab from "../components/DiscoverTab";
 import VideoCard from "../components/VideoCard";
 
 import Divider from "../components/Divider";
-import { uiuxData } from "../dummyData/uiuxData";
-import { uiuxArticleData } from "../dummyData/uiuxArticleData";
-import { uiuxToolsData } from "../dummyData/uiuxToolsData";
+import { dataAnalysisData } from "../dummyData/dataAnalysisData";
+import { dataAnalysisArticleData } from "../dummyData/dataAnalysisArticleData";
+import { dataAnalysisTools } from "../dummyData/dataAnalysisTools";
 
-function Discovery() {
+function DiscoverData() {
   const tabs = [
-    { name: "UX UI Design", href: "/discover", current: true },
+    { name: "UX UI Design", href: "/discover", current: false },
     { name: "Web Development", href: "/discoverWeb", current: false },
-    { name: "Cyber Security", href: "#", current: false },
-    { name: "Data Analysis", href: "#", current: false },
+    { name: "Cyber Security", href: "/discoverCyber", current: false },
+    { name: "Data Analysis", href: "/discoverData", current: true },
   ];
 
-  const [text, setText] = useState("UI UX Design");
+  const [text, setText] = useState("Data Analysis");
 
   const handleClick = (e) => {
     setText(e.target.innerText);
@@ -39,23 +39,26 @@ function Discovery() {
 
       <div className="mt-5">
         <VideoCard
-          data={uiuxData}
+          data={dataAnalysisData}
           text={`Recommended videos for you in ${text} `}
         />
       </div>
       <div className="mt-20 mb-10">
         <Divider />
       </div>
-      <VideoCard data={uiuxToolsData} text={`Trending Tools for  ${text}`} />
+      <VideoCard
+        data={dataAnalysisTools}
+        text={`Trending Tools for  ${text}`}
+      />
       <div className="mt-20 mb-10">
         <Divider />
       </div>
       <VideoCard
-        data={uiuxArticleData}
+        data={dataAnalysisArticleData}
         text={`Articles & books for  ${text}`}
       />
     </div>
   );
 }
 
-export default Discovery;
+export default DiscoverData;
