@@ -2,9 +2,8 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <div>Logo Goes here</div>
-  </a>
+
+
   
 <br></br>
 
