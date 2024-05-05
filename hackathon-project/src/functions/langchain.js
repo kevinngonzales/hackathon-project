@@ -14,7 +14,7 @@ export async function getAnswer(question) {
   let answer = "Should return an Answer";
   try {
     answer = await llm.invoke(question);
-    console.log(answer);
+
     return answer;
   } catch (e) {
     console.error(e);

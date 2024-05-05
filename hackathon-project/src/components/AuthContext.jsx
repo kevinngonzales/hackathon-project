@@ -1,8 +1,7 @@
 import { React, createContext, useState, useContext } from "react";
 
-
-//use createContext to create global state variables 
-//manage users logging in and out 
+//use createContext to create global state variables
+//manage users logging in and out
 
 const AuthContext = createContext();
 

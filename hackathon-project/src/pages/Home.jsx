@@ -1,10 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { getAnswer } from "../functions/langchain";
 import { Link } from "react-router-dom";
 import { useAuth } from "../components/AuthContext";
+import ChatLog from "../components/ChatLog";
 
 //home page
 function Math() {
+  const listEndRef = useRef(null);
+  const scrollToBottom = () => {
+    listEndRef.current?.scrollIntoView({
+      behavior: "auto",
+    });
+  };
+
+  const [list, setList] = useState([]);
   const [question, setQuestion] = useState("");
   const [results, setResults] = useState("");
   const { isLoggedIn } = useAuth();
@@ -15,8 +24,11 @@ function Math() {
     console.log(question);
     const answer = await getAnswer(question);
     setResults(answer);
-
     setLoadChat(true);
+
+    const newObject = { question: question, results: answer };
+
+    setList([...list, newObject]);
   }
 
   function clearChat() {
@@ -32,52 +44,44 @@ function Math() {
     }
   }, [isLoggedIn]);
 
+  useEffect(() => {
+    scrollToBottom();
+  }, [list]);
+
   return (
     <>
-      <div class="ml-64 flex flex-col h-screen mr-10 pl-24">
+      <div className="ml-64 flex flex-col h-screen mr-10 pl-24">
         <Link to="/" className="text-white">
-          <div class=" flex items-center justify-between mt-8 mr-10">
-            <img class="h-20" src="/text.svg" />
-            <div class="flex content-center align-middle">
-              <button onClick={clearChat} class="order-1">
-                <img class="h-9" src="/refresh.png" />
+          <div className=" flex items-center justify-between mt-8 mr-10">
+            <img className="h-20" src="/text.svg" />
+            <div className="flex content-center align-middle">
+              <button onClick={clearChat} className="order-1">
+                <img className="h-9" src="/refresh.png" />
               </button>
-              <button class="mr-3">
-                <img class="h-9" src="note.svg" />
+              <button className="mr-3">
+                <img className="h-9" src="note.svg" />
               </button>
             </div>
           </div>
         </Link>
 
         {isLoggedIn && !loadChat && (
-          <img class="flex h-56 mt-32" src="/homelogo.svg" />
+          <img className="flex h-56 mt-32" src="/homelogo.svg" />
         )}
 
         {!isLoggedIn && !loadChat && (
-          <img class="flex h-56 mt-32" src="/homelogo2.svg" />
+          <img className="flex h-56 mt-32" src="/homelogo2.svg" />
         )}
 
         {/* shows users prompt and ai's answer like a chat display */}
 
-        <div className="flex-grow rounded-2xl m-6">
+        <div className=" flex flex-grow rounded-2xl m-6" ref={listEndRef}>
           {loadChat && (
-            <div className="flex-col pl-32 pr-32 items-start ">
-              <div className="flex-col mb-20">
-                <div className="flex items-center mb-2">
-                  <img className="mr-2" src="profile.svg" />
-                  <div className="mr-10">You:</div>
-                </div>
-                {question}
-              </div>
-
-              <div className="flex-col mr-24 ">
-                <div className="flex items-center mb-6">
-                  <img className="mr-2" src="robot.svg" />
-                  <div className="mr-12">TechUp:</div>
-                </div>
-                {results}
-              </div>
-            </div>
+            <ul>
+              {list.map((item, key) => (
+                <ChatLog key={key} item={item} />
+              ))}
+            </ul>
           )}
         </div>
 
@@ -152,7 +156,7 @@ function Math() {
             />
 
             <button
-              class="border-white rounded-2xl border-2 h-24 w-2/12 ml-6 transition-all hover:bg-pink"
+              className="border-white rounded-2xl border-2 h-24 w-2/12 ml-6 transition-all hover:bg-pink"
               type="submit"
             >
               Enter
