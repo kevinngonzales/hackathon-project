@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 import { useAuth } from "../components/AuthContext";
 
@@ -35,10 +35,15 @@ function Login() {
     <div class="ml-64 flex flex-col h-screen mr-10">
       <section>
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-          <div class="w-full rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
+          <div class="w-full  md:mt-0 sm:max-w-md xl:p-0 ">
+
+          <div class='flex justify-center pt-12'>
+                <img src="logo.svg"></img>
+              </div>
+
             <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-              <h1 class="text-xl font-bold leading-tight tracking-tight md:text-2xl dark:text-white">
-                Sign in to your account
+              <h1 class="flex justify-center text-xl font-bold leading-tight tracking-tight md:text-2xl dark:text-white">
+                Welcome Back!
               </h1>
               {isLoggedIn ? (
                 <p>You are already logged in!</p>
@@ -55,8 +60,7 @@ function Login() {
                       type="email"
                       name="email"
                       id="email"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                      placeholder="name@company.com"
+                      class="hover:bg-gray-400  transition-all bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       onChange={(e) => {
                         setEmail(e.target.value);
                       }}
@@ -73,8 +77,7 @@ function Login() {
                       type="password"
                       name="password"
                       id="password"
-                      placeholder="••••••••"
-                      class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                      class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 hover:bg-gray-400  transition-all dark:bg-white dark:border-gray-600 dark:placeholder-gray-400 dark:text-black dark:focus:ring-blue-500 dark:focus:border-blue-500"
                       onChange={(e) => {
                         setPassword(e.target.value);
                       }}
@@ -83,11 +86,19 @@ function Login() {
 
                   <button
                     type="submit"
-                    class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+                    class="w-full transition-all hover:bg-tertiary/[0.5] text-white bg-secondary h-12 rounded-xl dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
                     onClick={submit}
                   >
                     Sign in
                   </button>
+
+                  <div class="flex justify-center space-x-1 text-md">
+                      <div>Dont't have an account?</div>
+                      <Link class="text-tertiary" to="/login">
+                        Sign up
+                      </Link>
+                    </div>
+
                 </form>
               )}
             </div>

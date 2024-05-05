@@ -3,8 +3,7 @@ import { getAnswer } from "../functions/langchain";
 import { Link } from "react-router-dom";
 import { useAuth } from "../components/AuthContext";
 
-
-//home page 
+//home page
 function Math() {
   const [question, setQuestion] = useState("");
   const [results, setResults] = useState("");
@@ -26,11 +25,10 @@ function Math() {
     setLoadChat(false);
   }
 
-
   // check if user is not logged in then clearchat if user logs out
   useEffect(() => {
     if (!isLoggedIn) {
-      clearChat(); 
+      clearChat();
     }
   }, [isLoggedIn]);
 
@@ -40,11 +38,11 @@ function Math() {
         <Link to="/" className="text-white">
           <div class=" flex items-center justify-between mt-8 mr-10">
             <img class="h-20" src="/text.svg" />
-            <div class='flex content-center align-middle'>
+            <div class="flex content-center align-middle">
               <button onClick={clearChat} class="order-1">
                 <img class="h-14" src="/refresh.png" />
               </button>
-              <button class='mr-3'>
+              <button class="mr-3">
                 <img src="note.svg" />
               </button>
             </div>
@@ -96,23 +94,12 @@ function Math() {
                 );
                 handleSubmit(e);
               }}
-              className="border-white border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all ml-6 h-20"
+              className="border-white border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all ml-6 h-20 hover:bg-slate-800/[0.2]"
             >
               <div class="font-bold">Lesson Clarification</div>
               Understanding design patterns
             </button>
-            <button
-              onClick={(e) => {
-                setQuestion(
-                  "What are some ways I can get a better understanding of design patterns?"
-                );
-                handleSubmit(e);
-              }}
-              className="border-white border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all mr-8 h-20"
-            >
-              <div class="font-bold">Career Readiness</div>
-              Preparing for technical interviews
-            </button>
+
             <button
               onClick={(e) => {
                 setQuestion(
@@ -120,11 +107,12 @@ function Math() {
                 );
                 handleSubmit(e);
               }}
-              className="border-white border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all ml-6 h-20"
+              className="border-white hover:bg-slate-800/[0.2] border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all mr-8 h-20 "
             >
-              <div class="font-bold">Project Assistance</div>
-              Debugging coding errors
+              <div class="font-bold">Career Readiness</div>
+              Preparing for technical interviews
             </button>
+
             <button
               onClick={(e) => {
                 setQuestion(
@@ -132,10 +120,23 @@ function Math() {
                 );
                 handleSubmit(e);
               }}
-              className="border-white border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all mr-8 h-20"
+              className="border-white border-2  hover:bg-slate-800/[0.2] bg-slate-200/[0.1] text-white rounded-2xl transition-all ml-6 h-20"
+            >
+              <div class="font-bold">Project Assistance</div>
+              Debugging coding errors
+            </button>
+
+            <button
+              onClick={(e) => {
+                setQuestion(
+                  "What are up-to-date resources for learning about programming languages"
+                );
+                handleSubmit(e);
+              }}
+              className="border-white border-2 bg-slate-200/[0.1] text-white hover:bg-slate-800/[0.2] rounded-2xl transition-all mr-8 h-20 "
             >
               <div class="font-bold">Help Me Study</div>
-              Learning programing languages
+              Learning programming languages
             </button>
           </div>
         )}
@@ -145,8 +146,8 @@ function Math() {
             <input
               type="text"
               id="question"
-              placeholder='Type here....'
-              class="border-white border-2 bg-slate-200/[0.1] text-white w-10/12 h-24 rounded-2xl ml-6 transition-all hover:bg-slate-800/[0.2]"
+              placeholder="Type here...."
+              class="border-white border-2 bg-slate-200/[0.1] text-white w-10/12 h-24 rounded-2xl ml-6 transition-all hover:bg-slate-800/[0.2] "
               style={{ lineHeight: "24px" }}
               value={question}
               onChange={(e) => {

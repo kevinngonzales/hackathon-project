@@ -18,29 +18,33 @@ function Sidebar() {
         placeholder="Search"
       />
 
-<ul className="flex-col h-full content-start p-3 ml-3 space-y-6">
-  <li className="flex items-center"> {/* Apply Flexbox and center items */}
-    <Link to="/discover" className="text-white flex items-center"> {/* Apply Flexbox and center items */}
-      <img src="/discover.svg" className="mr-2" /> {/* Add margin to create space */}
-      Discover
-    </Link>
-  </li>
-  <hr></hr>
-</ul>
-
-
+      <ul className="flex-col h-full content-start p-3 ml-3 space-y-6">
+        <li className="rounded-xl transition-all hover:bg-pink h-12 pl-2 flex items-center">
+          <Link to="/" className="text-white flex items-center">
+            <img src="/logo.svg" class="h-9 mr-2" />
+            AI Generator
+          </Link>
+        </li>
+        <li className="rounded-xl transition-all hover:bg-pink h-12 pl-2 flex items-center">
+          <Link to="/discover" className="text-white flex items-center">
+            <img src="/discover.svg" className="mr-2" />
+            Discover
+          </Link>
+        </li>
+        <hr></hr>
+      </ul>
 
       {/* conditionally render signup/login buttons depending on isloggedin state */}
 
       {!isLoggedIn && (
-        <div className="flex-col pt-56">
-          <Link to="/Signup">
-            <button className="flex justify-center bg-secondary p-2 rounded-xl w-10/12 ml-5">
+        <div className="flex-col pt-56 rounded-lg ">
+          <Link to="/signup">
+            <button className="flex justify-center bg-secondary p-2 rounded-xl w-10/12 ml-5 bg-slate-500[0.1] transition-all hover:bg-tertiary/[0.5]">
               Signup
             </button>
           </Link>
-          <Link to="/Login">
-            <button className="flex justify-center bg-slate-780 p-2 rounded-xl w-10/12 border-gray-600 border-4 mt-2 ml-5 mb-4">
+          <Link to="/login">
+            <button className="flex justify-center p-2 rounded-xl w-10/12 bg-slate-500[0.1] transition-all hover:bg-tertiary/[0.5] border-2 mt-2 ml-5 mb-7">
               Login
             </button>
           </Link>
