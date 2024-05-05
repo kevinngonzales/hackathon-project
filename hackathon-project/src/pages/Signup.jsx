@@ -46,8 +46,8 @@ function Signup() {
   }
 
   return (
-    <div class="bg-white text-black">
-      <div class="bg-white text-black ml-64 flex flex-col h-screen mr-10">
+    <div class=" bg-purple-50 text-black">
+      <div class="bg-purple-50 text-black ml-64 flex flex-col h-screen mr-10">
         <section>
           <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
             <div class="w-full md:mt-0 sm:max-w-md xl:p-0 transition-all">

@@ -34,32 +34,32 @@ function Math() {
 
   return (
     <>
-      <div className="ml-64 flex flex-col h-screen mr-10 pl-24 pr-24">
+      <div class="ml-64 flex flex-col h-screen mr-10 pl-24">
         <Link to="/" className="text-white">
-          <div className=" flex items-center justify-between mt-8 mr-10">
-            <img className="h-20" src="/text.svg" />
-            <div className="flex content-center align-middle">
-              <button onClick={clearChat} className="order-1">
-                <img className="h-14" src="/refresh.png" />
+          <div class=" flex items-center justify-between mt-8 mr-10">
+            <img class="h-20" src="/text.svg" />
+            <div class="flex content-center align-middle">
+              <button onClick={clearChat} class="order-1">
+                <img class="h-9" src="/refresh.png" />
               </button>
-              <button className="mr-3">
-                <img src="note.svg" />
+              <button class="mr-3">
+                <img class="h-9" src="note.svg" />
               </button>
             </div>
           </div>
         </Link>
 
         {isLoggedIn && !loadChat && (
-          <img className="flex h-64 mt-56" src="/homelogo.svg" />
+          <img class="flex h-56 mt-32" src="/homelogo.svg" />
         )}
 
         {!isLoggedIn && !loadChat && (
-          <img className="flex h-64 mt-56" src="/homelogo2.svg" />
+          <img class="flex h-56 mt-32" src="/homelogo2.svg" />
         )}
 
         {/* shows users prompt and ai's answer like a chat display */}
 
-        <div className="flex-grow rounded-2xl pt-20 m-6">
+        <div className="flex-grow rounded-2xl m-6">
           {loadChat && (
             <div className="flex-col pl-32 pr-32 items-start ">
               <div className="flex-col mb-20">
@@ -92,7 +92,6 @@ function Math() {
                 setQuestion(
                   "What are some ways I can get a better understanding of design patterns?"
                 );
-                handleSubmit(e);
               }}
               className="border-white border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all ml-6 h-20 hover:bg-slate-800/[0.2]"
             >
@@ -105,7 +104,6 @@ function Math() {
                 setQuestion(
                   "What are some ways I can be more prepared for technical interviews?"
                 );
-                handleSubmit(e);
               }}
               className="border-white hover:bg-slate-800/[0.2] border-2 bg-slate-200/[0.1] text-white rounded-2xl transition-all mr-8 h-20 "
             >
@@ -118,7 +116,6 @@ function Math() {
                 setQuestion(
                   "What are some ways I can be better at troubleshooting and debugging coding errors?"
                 );
-                handleSubmit(e);
               }}
               className="border-white border-2  hover:bg-slate-800/[0.2] bg-slate-200/[0.1] text-white rounded-2xl transition-all ml-6 h-20"
             >
@@ -131,7 +128,6 @@ function Math() {
                 setQuestion(
                   "What are up-to-date resources for learning about programming languages"
                 );
-                handleSubmit(e);
               }}
               className="border-white border-2 bg-slate-200/[0.1] text-white hover:bg-slate-800/[0.2] rounded-2xl transition-all mr-8 h-20 "
             >
@@ -156,7 +152,7 @@ function Math() {
             />
 
             <button
-              className="border-white rounded-2xl border-2 h-24 w-2/12 ml-6 transition-all hover:bg-slate-800/[0.6]"
+              class="border-white rounded-2xl border-2 h-24 w-2/12 ml-6 transition-all hover:bg-pink"
               type="submit"
             >
               Enter
