@@ -3,18 +3,18 @@
 
 <div align="center">
 
+<img src='https://i.ibb.co/R4SXp5v/logo.png' />
 
-  
-<br></br>
-
-  <h3 align="center">App Name Goes Here</h3>
+  <h3 align="center">TechUp</h3>
 
 <br></br>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div>Preview of Project can go here</div>
+
+https://github.com/kevinngonzales/hackathon-project/assets/147567696/0f0c3690-9610-48af-9a23-36b01bc7c21e
+
 
 <br></br>
 
