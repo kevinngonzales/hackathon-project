@@ -12,7 +12,9 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<div>Preview of Project can go here</div>
+
+https://github.com/kevinngonzales/hackathon-project/assets/147567696/0f0c3690-9610-48af-9a23-36b01bc7c21e
+
 
 <br></br>
 
