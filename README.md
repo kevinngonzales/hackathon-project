@@ -2,13 +2,10 @@
 <!-- PROJECT LOGO -->
 
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
-    <div>Logo Goes here</div>
-  </a>
-  
-<br></br>
 
-  <h3 align="center">App Name Goes Here</h3>
+<img src='https://i.ibb.co/R4SXp5v/logo.png' />
+
+  <h3 align="center">TechUp</h3>
 
 <br></br>
 
